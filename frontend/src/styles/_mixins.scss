@@ -1,0 +1,8 @@
+@mixin flexify ($flex_dir : column,$justify_content : center,$align_items : center,$align_content : center ) {
+    display: flex;
+    flex-direction: $flex_dir;
+    justify-content: $justify_content;
+    align-items: $align_items;
+    align-content: $align_content;
+    flex-wrap: wrap;
+};

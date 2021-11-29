@@ -1,0 +1,83 @@
+@import "./colors" ;
+@import "./typography" ;
+
+body{
+    overflow-x: hidden;
+    font-size: $base_font_size;
+}
+body , p , input, button , span , div {
+    font-family: $default-font;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $primary-font;
+}
+h1{
+    font-size: $h1size ;
+    text-transform: capitalize;
+}
+h2
+{
+    font-size: $h2size ;
+}
+h3{
+    font-size: $h3size ;
+}
+h4{
+    font-size: $h4size ;
+}
+h5{
+    font-size: $h5size ;
+}
+h6{
+    font-size: $h6size ;
+}
+
+p {
+    padding: 10px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    outline: none;
+    color: purple_clear(1) ;
+    text-decoration: none;
+    font-family: $primary-font;
+}
+a:hover{
+    cursor: pointer;
+}
+a:active{
+    color : blue(1)
+}
+
+input ,textarea {
+    padding: 10px;
+    background-color: white(1);
+    padding-left: 15px;
+    border: none;
+    outline: none;
+    font-family: $default-font;
+}
+input::placeholder{
+    color: black(0.6);
+}
+button {
+    outline: none;
+    font-family: $primary-font;
+    font-size: $base_font_size * 1.15;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    background-color: black(1);
+}
+
+label{
+    font-family: $primary-font;
+    font-size: $h2size / 1.2;
+}
