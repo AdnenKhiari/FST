@@ -1,9 +1,15 @@
 @import "./colors" ;
 @import "./typography" ;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body{
     overflow-x: hidden;
     font-size: $base_font_size;
+    letter-spacing: 0.05rem;
 }
 body , p , input, button , span , div {
     font-family: $default-font;
@@ -11,7 +17,9 @@ body , p , input, button , span , div {
 
 h1,h2,h3,h4,h5,h6{
     font-family: $primary-font;
+    color :blue(1);
 }
+
 h1{
     font-size: $h1size ;
     text-transform: capitalize;
@@ -44,9 +52,10 @@ ul{
 }
 a{
     outline: none;
-    color: purple_clear(1) ;
+    color: red(1) ;
     text-decoration: none;
     font-family: $primary-font;
+    font-size: $h3size;
 }
 a:hover{
     cursor: pointer;
@@ -57,14 +66,14 @@ a:active{
 
 input ,textarea {
     padding: 10px;
-    background-color: white(1);
+    background-color: aqua(1);
     padding-left: 15px;
     border: none;
     outline: none;
     font-family: $default-font;
 }
 input::placeholder{
-    color: black(0.6);
+    color: rich-black(0.6);
 }
 button {
     outline: none;
@@ -74,7 +83,7 @@ button {
     cursor: pointer;
     padding: 10px 20px 10px 20px;
     color: white;
-    background-color: black(1);
+    background-color: rich-black(1);
 }
 
 label{

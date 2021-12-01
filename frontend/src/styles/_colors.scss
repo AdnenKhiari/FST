@@ -1,12 +1,13 @@
 @function blue ($alpha : 1){
-    @return rgba(19, 101, 251,$alpha)
+    @return rgba(3, 72, 201,$alpha)
 };
 @function aqua ($alpha : 1){
     @return rgba(64, 188, 216,$alpha)
 };
 @function white ($alpha : 1){
-    @return rgba(220, 220, 230,$alpha)
+    @return rgba(251, 254, 249,$alpha)
 };
+
 @function black ($alpha : 1 ){
     @return rgba(9, 12, 2,$alpha)
 };

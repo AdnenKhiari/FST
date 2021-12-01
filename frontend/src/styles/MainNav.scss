@@ -1,0 +1,53 @@
+@import "./colors" ;
+@import "./typography";
+@import "./mixins";
+
+.main-nav-container{
+    width: 100vw;
+    height: 80px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;  
+    z-index: 10000;
+    background-color: black(1);
+    .main-nav-inner-container{
+    padding: 0px 15px;
+    margin: auto;
+    max-width: 1700px;
+    @include flexify(row,space-between);
+    flex-wrap: nowrap;
+
+    img{
+        height: 80px;
+        object-fit: contain;
+        border-right: 2px solid rich-black(1);
+    }
+    nav {
+        width: 100%;
+        height: 100%;
+        ul{
+            height: 100%;
+            padding: 0px 30px;
+            @include flexify(row,flex-end);
+            a{
+                color: white(1);
+                font-style: italic;
+            }
+            li{
+                align-self: center;
+                padding: 10px 15px;
+                transition: all 100ms ease-in-out;
+            }
+            li:hover{
+                background-color: turqoise(1) ;
+                padding-left: 25px;
+                padding-right: 25px;
+                a{
+                    color: rich-black(1);
+                }
+                transform: scale(1.1) skewX(10deg);
+            }
+        }
+    }
+}
+}

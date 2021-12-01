@@ -1,0 +1,32 @@
+@import "../colors" ;
+@import "../typography";
+@import "../mixins";
+.clubs-container{
+    width: 100%;
+    .clubs-inner-container{
+        max-width: 1700px;
+        margin: auto;
+        padding: 15px;
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .clubs-list{
+            img{
+                max-width: 250px;
+                max-height: 200px;
+                object-fit: contain;
+                filter: grayscale(0.8);
+                transition: all 200ms ease;
+                cursor: pointer;
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+            img:hover{
+                filter: grayscale(0);
+                transform: scale(1.2);
+            }
+            @include flexify(row,space-around);
+        }
+    }
+}
