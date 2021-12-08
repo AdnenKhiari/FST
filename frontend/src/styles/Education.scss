@@ -1,61 +1,85 @@
 @import "./colors" ;
 @import "./typography";
 @import "./mixins";
-
-.education-container{
+.speciality-container{
     width: 100%;
-    background-color: rich-black(1);
-    color: white(1);
-    .education-inner-container{
-        width: 100%;
-        max-width: 1700px;
-        margin: auto;
+    .speciality-inner-container{
         padding: 15px;
-        .education-list{
+        padding-bottom: 30px;
+        @include flexify(row,flex-start,flex-start);
+        align-content: flex-start;
+        flex-wrap: nowrap;
+        height: 100%;
+        max-width: 1700px;
+        min-height: 80vh;
+        margin: auto;
+        nav{
+            position: sticky;
+            top: 100px;
+            padding-top: 20px;
+            height: 100%;
+            font-size: $h2size/1.5;
+            ul{
+                width: 100%;
+                cursor: pointer;
+                @include flexify(column,flex-start,flex-start);
+                li{
+                    width: 100%;
+                    padding: 15px;
+                    background-color: rich-black(1);
+                    flex-wrap: nowrap;
+                    font-family: $secondary-font;
+                    margin-bottom: 10px;
+                    transition: all 50ms ease-in-out;
+                    color: red(1);
+                }
+                li:hover{
+                    background-color: red(1);
+                    color: rich-black(1);
+
+                }
+                .selected-item{
+                    border-left: 4px solid blue(1);
+                    background-color: red(1);
+                    color: rich-black(1);
+                }
+            
+                
+            }
+ 
+        }
+        .speciality-content{
+            padding-left: 50px;
             width: 100%;
-            :nth-child(odd){
-                flex-direction: row-reverse;
-                .education-component-content{
-                    padding-right: 30px;
+            min-height: 100%;
+            .speciality-field{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr) );
+                .speciality-field-description{
+                    width: 100%;
+                    padding: 10px;
+                    li{
+                        cursor: pointer;
+                        margin: 20px 0px;
+                        padding-bottom: 5px;
+                        border-bottom: 2px solid red(1);
+                        a{
+                            color: black(1);
+                            font-family: $default-font;
+                        }
+                        transition: 100ms all ease-in-out;
+                    }
+                    li:hover{
+                        border-bottom-color: blue(1);
                         padding-left: 10px;
+                    }
                 }
             }
-            .education-component{
-                background-color: black(1);
-                display: flex;
-                justify-content: flex-start;
-                align-content: space-round;
-                flex-wrap: nowrap;
-                align-content: space-around;
-                max-width: 1200px;
-                margin: 15px auto;
-                height: 550px;
-
-                img{
-                    flex: 1;
-                    width: 550px;
-                    object-fit: cover;
-                }
-                .education-component-content{
-                    height: 100%;
-                    @include flexify(column,space-around);
-                    flex: 2;
-                    max-width: 500px;
-                    padding: 10px;
-                    padding-left: 30px;
-                    h2{
-                        color:red(1);
-                    }
-                    a{
-                        align-self: flex-end;
-                        padding: 10px 30px;
-                        background-color: blue(1);
-                        color: white(1);
-                    }
-                }
+            h1{
+                margin-bottom: 30px;
             }
         }
-
-
     }
+    
 }

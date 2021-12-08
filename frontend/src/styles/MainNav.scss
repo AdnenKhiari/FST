@@ -10,13 +10,13 @@
     top: 0;  
     z-index: 10000;
     background-color: black(1);
+    box-shadow: 0px 0px 5px rich-black(0.7);
     .main-nav-inner-container{
     padding: 0px 15px;
     margin: auto;
     max-width: 1700px;
     @include flexify(row,space-between);
     flex-wrap: nowrap;
-
     img{
         height: 80px;
         object-fit: contain;
@@ -32,6 +32,8 @@
             a{
                 color: white(1);
                 font-style: italic;
+                font-family: $secondary-font;
+
             }
             li{
                 align-self: center;

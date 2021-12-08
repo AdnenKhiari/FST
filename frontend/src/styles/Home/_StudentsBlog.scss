@@ -3,7 +3,7 @@
 @import "../mixins";
 
 .sd-blog-container{
-    width: 100%;
+    width: 100vw;
     .sd-blog-inner-container{
         max-width: 1700px;
         margin: auto;
@@ -20,10 +20,11 @@
             .sd-blog-article-article,.sd-blog-article-img{
                 max-width: 1000px;
                 min-width: 400px;
-                height: 400px;
+                border: 1px solid black(1);
+                height: 402px;
             }
             .sd-blog-article-article{
-                background-color: white(1);
+                background-color: red(1);
                 grid-column: span 1;
                 .sd-blog-article-header{
                     background-color: rich-black(1);
@@ -36,7 +37,6 @@
                         object-fit: cover;
                         margin-right: 10px;
                     }
-
                     .sd-blog-article-author{
                         margin-top: 10px;
                         font-family: $secondary-font;
@@ -60,15 +60,17 @@
                         font-size: $h3size*1.5;
                         font-weight: 800;
                         text-align: center;
-                        color: red(1);
+                        color: blue(1);
                     }
                 }
                 .sd-blog-article-footer{
                     height: 3rem;
                     text-align: right;
                     a{
-                        padding: 10px 20px;
+                        padding: 8px 20px;
                         border: solid 1px aqua(1);
+                        border-right: none;
+                        border-bottom: none;
                         color: turquoise;
                         background-color: rich-black(1);
                     }
@@ -99,7 +101,7 @@
                     }
                 }
                 a{
-                    color : red(1);
+                    color : blue(1);
                 }
             }
         }

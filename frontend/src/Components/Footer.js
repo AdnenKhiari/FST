@@ -76,8 +76,7 @@ const Footer = ()=>{
                     <p className="field">Fax : <span>71 871 666</span> </p>
                     <p className="field">Email :</p> 
                     <p><a href="mailto:mongi.brichni@fst.rnu.tn">mongi.brichni@fst.rnu.tn</a></p>
-                    <p className="field">UTM Email :</p> 
-                    <p><a href="mailto:utm@utm.tn">utm@utm.tn</a></p>
+
                 </div>
                 <iframe title="fstmap "id="gmap_canvas" src="https://maps.google.com/maps?q=fst%20tunisie&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" />
             </div>

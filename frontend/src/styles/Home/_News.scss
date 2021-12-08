@@ -1,7 +1,7 @@
 @import "../colors" ;
 @import "../typography" ;
 .news-container{
-    width: 100%;
+    width: 100vw;
     position: relative;
     *{
         z-index: 20;

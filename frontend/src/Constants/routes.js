@@ -1,8 +1,8 @@
-export const HOME = "/" 
-export const CONTACTUS = "/contact" 
+export const HOME = "/" //
+export const CONTACTUS = "/contact" //
 export const NEWS = "/news" 
 export const POSTS = "/posts" 
-export const ARTICLE = "/posts/:postid" 
+export const ARTICLE = (postid = '0')=> "/posts/" +postid
 export const GALLERY = "/gallery" 
 export const CLUBS = "/clubs" 
 export const EDUCATION = "/education" 

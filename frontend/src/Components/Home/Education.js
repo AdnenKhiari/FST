@@ -1,8 +1,9 @@
-import "./../../styles/Education.scss"
+import "./../../styles/Home/_Education.scss"
 import {Link} from "react-router-dom"
 const Education = ()=>{
     return <section className="education-container">
         <div className="education-inner-container">
+            <h1>Departments</h1>
             <div className="education-list">
             <article className="education-component">
                     <img src="images/infodept.jpg" alt="mathdept" />

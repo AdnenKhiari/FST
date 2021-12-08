@@ -5,38 +5,36 @@
 .footer-container{
     
     width: 100vw;
-    height: 400px;
+    height: 300px;
     background-color: black(1);
     position: relative;
-
     .footer-inner-container{
     //padding: 15px;
     margin: auto;
     height: 100%;
     max-width: 1700px;
     display: grid;
-    grid-template-columns: 0.6fr 0.4fr;
+    grid-template-columns: 1fr 1fr;
     color: white(1);
     .splitter{
         position: absolute;
         top: -55px;
-        left: 50%;
+        left: 49%;
     }
     i{
         z-index: 100;
         color: turquoise(1);
         font-size: $h1size*1.3;
     }
-
     .footer-content{
         width : 100%;
         .footer-nav{
             height: 100%;
             display: grid;
-            grid-template-columns: 0.33fr 0.335fr 0.33fr;
+            grid-template-columns: 0.33fr 0.33fr 0.33fr;
             .footer-nav-block{
                 padding: 15px;
-                height: 350px;
+                height: 250px;
                 width : 100%;
                 border-right: 2px solid aqua(1);
                 align-self: center;
@@ -44,7 +42,8 @@
                     a{
                         color: white(1);
                         font-weight: 200;
-                        font-size: $h3size;
+                        font-family: $secondary-font;
+                        font-size: $base_font_size;
                         font-style: italic;
                     }
                     padding-bottom: 15px;
@@ -53,17 +52,18 @@
         }
     }
         .footer-map{
-            padding: 15px;
             @include flexify(row,flex-start);
             flex-wrap: nowrap;
-            width: 100%;
             align-self: center;
-            height: 350px;
+
+            padding: 15px;
+            width: 100%;
+            height: 250px;
             font-size: $base_font_size/1.1;
             .field{
-                font-weight: 600;
+                font-size: $base_font_size*1.25;
                 font-style: italic;
-                font-size: $base_font_size*1.15;
+                font-size: $base_font_size;
                 span{
                     font-size: $base_font_size/1.1;
                     font-style: normal;
@@ -78,6 +78,7 @@
             iframe{
                 width: 100%;
                 height: 100%;
+                padding: 0px 15px;
             }
         }
     }

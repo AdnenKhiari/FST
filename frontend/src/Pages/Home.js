@@ -11,10 +11,9 @@ const Home = ()=>{
         <Hero />
         <News />
         <StudentsBlog />
-        <Clubs />
         <Stat />
-
         <Education />
+        <Clubs />
 
     </>
     /*

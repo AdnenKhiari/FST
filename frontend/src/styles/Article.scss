@@ -1,0 +1,70 @@
+@import "./colors" ;
+@import "./typography";
+@import "./mixins";
+.article-container{
+    background-image: url("./../images/bg.png");
+    background-color: red(0.8);
+    width: 100%;
+    min-height: 100vh;
+    .article-inner-container{
+        background-color: white(1);
+        padding: 15px;
+        min-height: 100%;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        .article-header{
+            .article-header-meta{
+                @include flexify(row,flex-start);
+                flex-wrap: nowrap;
+                small{
+                    display: block;
+                    margin-left: 10px;
+                    color: rich-black(0.8);
+                    font-family: $default-font;
+                    font-size: $h3size;
+                }
+                img{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    border: 1px solid rich-black(1);
+                    box-shadow: 0px 0px 10px blue(0.45);
+                }
+                div{
+                    margin-left: 10px;
+                }
+                p{
+                    font-size: $h1size;
+                    font-family: $primary-font;
+                    text-transform: capitalize;
+                }
+                margin: 20px 0px;
+            }
+            .article-header-img{
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+            }
+            hr{
+                display: block;
+                outline: none;
+                height: 4px;
+                margin: 30px 0px;
+                border: none;
+                background: red(1);
+            }
+            h1{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+        }
+        .article-body{
+
+        }
+        .article-footer{
+
+        }
+    }
+}
