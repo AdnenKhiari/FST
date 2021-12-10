@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&family=Poppins&family=Roboto&display=swap');
 $secondary-font: 'Poppins', sans-serif;
-$base_font_size : 1.03rem;
+$base_font_size : 1rem;
 $primary-font: 'Playfair Display', serif;
 $default-font: 'Roboto', sans-serif;
-$h1size : 4rem;
-$h2size : 2.8rem;
-$h3size : 1.2rem;
-$h4size : 0.8rem;
-$h5size : 0.6rem;
-$h6size : 0.4rem;
+$h1size : $base_font_size * 4;
+$h2size : $base_font_size * 2.8;
+$h3size : $base_font_size * 1.2;
+$h4size : $base_font_size * 0.8;
+$h5size : $base_font_size * 0.6;
+$h6size : $base_font_size * 0.4;

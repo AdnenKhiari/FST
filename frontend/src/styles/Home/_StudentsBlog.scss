@@ -24,6 +24,7 @@
                 height: 402px;
             }
             .sd-blog-article-article{
+                position: relative;
                 background-color: red(1);
                 grid-column: span 1;
                 .sd-blog-article-header{
@@ -64,15 +65,23 @@
                     }
                 }
                 .sd-blog-article-footer{
-                    height: 3rem;
+
+                    height: 50px;
                     text-align: right;
                     a{
                         padding: 8px 20px;
-                        border: solid 1px aqua(1);
+                        border: solid 1px aqua(0.5);
                         border-right: none;
                         border-bottom: none;
-                        color: turquoise;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
                         background-color: rich-black(1);
+                        color: turqoise(1);
+                        transition: all 100ms ease;
+                    }
+                    a:hover{
+                        color: white(1);
                     }
                 }
 

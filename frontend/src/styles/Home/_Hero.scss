@@ -1,9 +1,10 @@
 @import "../colors" ;
 @import "../typography" ;
+@import "../mixins" ;
 .hero{
-    height: 90vh;
+    min-height: 95vh;
     width: 100vw;
-    background-image: url("./../../images/hero.jpg");
+    background-image: url("./../../images/main.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,14 +15,21 @@
     align-items: center;
     align-content: center;
     justify-content: center;
+    @include flexify(column,center,flex-start);
     *{
         z-index: 2;
     }
     h1{
+        color: white(1);
+    }
+    h1:first-letter{
+        font-size: $h1size*1.5;
+        color: red(1);
     }
     p{
         font-family: $secondary-font;
         font-size: $h3size;
+        color: red(1);
     }
 }
 .hero::after{
@@ -32,6 +40,6 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-image: linear-gradient(180deg, blue(0.5) 40%, rich-black(0.5) 100%);
+    background-image: linear-gradient(-90deg, blue(0.1) 30%, rich-black(0.7) 90%);
     opacity: 0.5;
 }

@@ -1,0 +1,53 @@
+services:
+  fststrapi:
+    image: strapi/strapi
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+    networks:
+      - strapi-app-network
+    ports:
+      - 1337:1337
+    volumes:
+      - "./backend/strapi/:/srv/app"
+  fstmongo:
+    image: mongo
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    networks:
+      - strapi-app-network
+    volumes:
+      - "./backend/mongodata:/data/db"
+    ports:
+      - "27017:27017"
+  mongoexpress:
+    image: mongo-express
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: ${ME_CONFIG_BASICAUTH_USERNAME}
+      ME_CONFIG_BASICAUTH_PASSWORD: ${ME_CONFIG_BASICAUTH_PASSWORD}
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: ${ME_CONFIG_MONGODB_ENABLE_ADMIN}
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${ME_CONFIG_MONGODB_ADMINUSERNAME}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${ME_CONFIG_MONGODB_ADMINPASSWORD} 
+      ME_CONFIG_OPTIONS_EDITORTHEME: "ambiance"
+      ME_CONFIG_MONGODB_SERVER: fstmongo
+      ME_CONFIG_MONGODB_PORT: 27017
+    networks:
+      - strapi-app-network
+    ports:
+      - "8081:8081"
+    depends_on:
+      - fstmongo
+networks:
+  strapi-app-network:
+    driver: bridge
+        

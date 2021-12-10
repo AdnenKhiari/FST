@@ -25,26 +25,41 @@
                 .posts-search-filter-field{
                     margin-left: 10px;
                     width: 100%;
-                    @include flexify(column,center,flex-start);
                     label{
                         font-size: $h2size/1.75;
                         font-family: $secondary-font;
                         padding: 5px;
                         margin-bottom: 10px;
+                        display: block;
                     }
                     input{
+                        display: block;
                         min-width: 250px;
                         margin-left: 5px;
                         margin-bottom: 5px;
                         color: rich-black(1);
                     }
                 }
-                .posts-search-filter-field:nth-child(3) div{
+                .posts-search-filter-field-date div{
                     @include flexify(row,flex-start);
                     flex-wrap: nowrap;
-                    *{
-                        flex: 1;
-                    }
+
+                }
+                .posts-search-filter-field:last-child{
+                    align-self: flex-end;
+                    button{
+                        margin-bottom: 5px;
+                        i{
+                            transition: all 100ms ease;
+                            padding-right: 10px;
+                        }
+                    }  
+                    button:hover{
+                        box-shadow:0px 0px  5px  aqua(0.7);
+                        i{
+                            color: aqua(1);
+                        }
+                    }       
                 }
             }
             p{

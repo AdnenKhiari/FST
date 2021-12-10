@@ -35,7 +35,6 @@ const Formation =() =>{
                     <li className="selected-item">Biologie</li>
                     <li>Chimie</li>
                     <li>Geologie</li>
-                    <li>Biologie</li>
                     <li>Informatique</li>
                     <li>Mathmathique</li>
                     <li>Physique</li>

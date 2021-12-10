@@ -5,7 +5,6 @@
 .main-nav-container{
     width: 100vw;
     height: 80px;
-    position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;  
     z-index: 10000;
@@ -33,7 +32,6 @@
                 color: white(1);
                 font-style: italic;
                 font-family: $secondary-font;
-
             }
             li{
                 align-self: center;
@@ -41,11 +39,11 @@
                 transition: all 100ms ease-in-out;
             }
             li:hover{
-                background-color: turqoise(1) ;
+                background-color: red(1) ;
                 padding-left: 25px;
                 padding-right: 25px;
                 a{
-                    color: rich-black(1);
+                    color: black(1);
                 }
                 transform: scale(1.1) skewX(10deg);
             }

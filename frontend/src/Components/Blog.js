@@ -1,26 +1,29 @@
 import * as ROUTES from "./../Constants/routes" 
 import { Link } from "react-router-dom"
 import "../styles/Posts.scss"
-const Blog = ({posts})=>{
+const Blog = ({posts,displayAuthor = true})=>{
     return <div className="posts-container">
     <div className="posts-header">
     <div className="posts-search">
         <p>Searching something ?</p>
         <div className="posts-search-filter">
             <div className="posts-search-filter-field">
-                <label htmlFor="author">Author</label>
-                <input type="search" name="author" id="author" />
-            </div>
-            <div className="posts-search-filter-field">
                 <label htmlFor="postname">Post Name</label>
                 <input type="search" name="postname" id="postname" />
             </div>
-            <div className="posts-search-filter-field">
+            {displayAuthor && <div className="posts-search-filter-field">
+                <label htmlFor="author">Author</label>
+                <input type="search" name="author" id="author" />
+            </div>}
+            <div className="posts-search-filter-field posts-search-filter-field-date">
                 <label htmlFor="datestart">Date</label>
                 <div>
                     <input type="date" name="datestart" id="datestart" />
                     <input type="date" name="dateend" id="dateend" />
                 </div>
+            </div>
+            <div className="posts-search-filter-field">
+                <button><i class="fas fa-search"></i>   Search</button>
             </div>
         </div>
     </div>

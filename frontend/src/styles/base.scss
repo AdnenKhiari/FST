@@ -23,6 +23,9 @@ input {
     font-size: $base-font-size;
     box-shadow: 0px 0px 5px aqua(0.5);
 }
+textarea{
+    font-size: $base-font-size;
+}
 
 h1,h2,h3,h4,h5,h6{
     font-family: $primary-font;
@@ -75,10 +78,11 @@ a:active{
 
 input ,textarea {
     padding: 10px;
-    background-color: aqua(1);
+    background-color: aqua(0.9);
     padding-left: 15px;
     border: none;
     outline: none;
+    border: 1px solid rich-black(0.1);
     font-family: $default-font;
 }
 input::placeholder{
@@ -95,8 +99,25 @@ button {
     background-color: rich-black(1);
 }
 
+select{
+    outline: none;
+    background-color: aqua(0.8);
+    font-family: $default-font;
+    border: none;
+    font-size: $base-font-size;
+    padding: 5px;
+    border: 1px solid rich-black(0.1);
+    option{
+        box-shadow: none;
+    }
+    cursor: pointer;
+}
 label{
-    font-family: $primary-font;
+    font-family: $secondary-font;
     font-size: $h2size / 1.2;
     color: rich-black(0.9);
+}
+
+textarea::placeholder ,input::placeholder{
+    color: rich-black(0.6);
 }

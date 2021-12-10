@@ -15,7 +15,7 @@ const News = ()=>{
         pfp : "https://picsum.photos/400",
         date :"25/05/2021"
     }]
-    return <Blog posts={posts}/>
+    return <Blog posts={posts} displayAuthor={false}/>
 }
 
 export default News;

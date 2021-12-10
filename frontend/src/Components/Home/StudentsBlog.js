@@ -1,6 +1,9 @@
 import "./../../styles/Home/_StudentsBlog.scss"
+import {Link} from "react-router-dom"
+import * as ROUTES from "./../../Constants/routes"
 const StudentsBlog = ()=>{
     const articlesList = [{
+        id:"7743",
         title:"JPO Coming Soon",
         date: "18-20-2021",
         description :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut animi illo deleniti, neque, ducimus corrupti accusantium ea consectetur iste sapiente tenetur aspernatur laudantium eum provident, nulla similique rerum repudiandae."+
@@ -9,6 +12,7 @@ const StudentsBlog = ()=>{
         author : "Adnen Khiari",
         pfp : "https://ui-avatars.com/api/?size=128"
     },{
+        id:"7743",
         title:"JPO Coming Soon",
         date: "18-20-2021",
         description :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut animi illo deleniti, neque, ducimus corrupti accusantium ea consectetur iste sapiente tenetur aspernatur laudantium eum provident, nulla similique rerum repudiandae."+
@@ -20,6 +24,7 @@ const StudentsBlog = ()=>{
 
     },
     {
+        id:"7743",
         title:"JPO Coming Soon",
         date: "18-20-2021",
         description :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut animi illo deleniti, neque, ducimus corrupti accusantium ea consectetur iste sapiente tenetur aspernatur laudantium eum provident, nulla similique rerum repudiandae."+
@@ -29,6 +34,7 @@ const StudentsBlog = ()=>{
         pfp : "https://ui-avatars.com/api/?size=128"
     },
     {
+        id:"7743",
         title:"JPO Coming Soon",
         date: "18-20-2021",
         description :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut animi illo deleniti, neque, ducimus corrupti accusantium ea consectetur iste sapiente tenetur aspernatur laudantium eum provident, nulla similique rerum repudiandae."+
@@ -36,9 +42,10 @@ const StudentsBlog = ()=>{
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi suscipit quibusdam nemo reprehenderit aut quas esse libero cum, similique asperiores, sit exercitationem ex laudantium animi recusandae assumenda eligendi unde optio.",
         author : "Adnen Khiari",
         pfp : "https://ui-avatars.com/api/?size=128",
-        img : "images/infoplus.jfif"
+        img : "images/infoplus.jpg"
 
     },{
+        id:"7743",
         title:"JPO Coming Soon",
         date: "18-20-2021",
         description :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut animi illo deleniti, neque, ducimus corrupti accusantium ea consectetur iste sapiente tenetur aspernatur laudantium eum provident, nulla similique rerum repudiandae."+
@@ -48,6 +55,7 @@ const StudentsBlog = ()=>{
         pfp : "https://ui-avatars.com/api/?size=128",
         img : "images/echec.jpg"
     },{
+        id:"7743",
         title:"JPO Coming Soon",
         date: "18-20-2021",
         description :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut animi illo deleniti, neque, ducimus corrupti accusantium ea consectetur iste sapiente tenetur aspernatur laudantium eum provident, nulla similique rerum repudiandae."+
@@ -58,6 +66,7 @@ const StudentsBlog = ()=>{
     }
     ,
     {
+        id:"7743",
         title:"JPO Coming Soon",
         date: "18-20-2021",
         description :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut animi illo deleniti, neque, ducimus corrupti accusantium ea consectetur iste sapiente tenetur aspernatur laudantium eum provident, nulla similique rerum repudiandae."+
@@ -66,6 +75,7 @@ const StudentsBlog = ()=>{
         author : "Adnen Khiari",
         pfp : "https://ui-avatars.com/api/?size=128"
     },{
+        id:"7743",
         title:"JPO Coming Soon",
         date: "18-20-2021",
         description :"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut animi illo deleniti, neque, ducimus corrupti accusantium ea consectetur iste sapiente tenetur aspernatur laudantium eum provident, nulla similique rerum repudiandae."+
@@ -84,7 +94,7 @@ const StudentsBlog = ()=>{
     </section>
 }
 
-const Article = ({title,author,date,description,pfp,img})=>{
+const Article = ({title,author,date,description,pfp,img,id})=>{
     
     return  img ?  <>
 
@@ -92,7 +102,7 @@ const Article = ({title,author,date,description,pfp,img})=>{
         <img src={img} alt="echec" />
         <div className="sd-blog-article-body">
             {pfp && <img src={pfp} alt="pfp"/>}
-            <p>{description.slice(0,200)}..<a href="">Read More..</a></p>
+            <p>{description.slice(0,200)}..<Link to={ROUTES.ARTICLE(id)}>Read More..</Link></p>
         </div>
     </article> 
     </> : <>
@@ -109,7 +119,7 @@ const Article = ({title,author,date,description,pfp,img})=>{
         <p>{description.slice(0,350)}</p>
     </div>
         <div className="sd-blog-article-footer">
-        <a href="">Read More..</a>
+        <Link to={ROUTES.ARTICLE(id)}>Read More..</Link>
         </div>
     </article> 
     </> 
