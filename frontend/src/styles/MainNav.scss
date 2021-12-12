@@ -45,7 +45,24 @@
                 a{
                     color: black(1);
                 }
+                cursor: pointer;
                 transform: scale(1.1) skewX(10deg);
+            }
+            li:last-child{
+                margin-left: 40px;
+                background-color: red(1) ;
+                padding-left: 40px;
+                padding-right: 40px;
+                transform: scale(1.1) skewX(10deg);
+                a{
+                    color: black(1);
+                }
+            }
+            li:last-child:hover{
+                background-color: white(1);
+                a{
+                    color: blue(1);
+                }
             }
         }
     }

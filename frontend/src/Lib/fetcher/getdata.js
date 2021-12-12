@@ -3,7 +3,7 @@ import useSWR from 'swr'
 import useSWRImmutable from 'swr/immutable'
 
 const getData = (get,link)=>{
-    const {data,error} = get(process.env.REACT_APP_MOCK_URL+link,fetcher);
+    const {data,error} = get(link,fetcher);
     if(error)
         console.log("ERROR : ",error);
     if(!data) 

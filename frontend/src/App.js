@@ -10,6 +10,7 @@ import Education from "./Pages/Education"
 import Posts from "./Pages/Posts"
 import Article from "./Pages/Article"
 import News from "./Pages/News"
+import Login from "./Pages/Login"
 import "./styles/base.scss"
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path={ROUTES.POSTS} element = {<Posts />} />
         <Route path={ROUTES.ARTICLE()} element = {<Article />} />
         <Route path={ROUTES.NEWS} element = {<News />} />
+        <Route path={ROUTES.LOGIN} element = {<Login />} />
         <Route path={ROUTES.CONTACTUS} element = {<Contact />} />
       </Route>
     </Routes>

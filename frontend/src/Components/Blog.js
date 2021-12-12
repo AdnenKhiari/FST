@@ -32,26 +32,24 @@ const Blog = ({posts,displayAuthor = true})=>{
     <div className="posts-inner-container">
         <section className="posts-articles">
             {posts && posts.map((data,index)=><Article {...data} key={index} />)}
-            {posts && posts.map((data,index)=><Article {...data} key={index} />)}
-            {posts && posts.map((data,index)=><Article {...data} key={index} />)}
         </section>
     </div>
     </div>
 
 }
 
-const Article = ({title,img,date,description,author,pfp})=>{
+const Article = ({id,title,previewimg,date,description,users_permissions_user,pfp})=>{
     return <article className="posts-article">
         <div>
             <img className="posts-article-pfp" src={pfp} alt="" />
         </div>
-        <img className="posts-article-img" src={img} alt="" />
+        <img className="posts-article-img" src={previewimg && /*process.env.URL+previewimg.url*/  ("http://localhost:1337"+previewimg.url) || "" } alt="" />
         <div className="posts-article-content">
-            <p className="posts-article-author">{author}</p>
+            <p className="posts-article-author">{users_permissions_user.username}</p>
             <p className="posts-article-date">{date}</p>
         </div>
         <p className="posts-article-title">{title}</p>
-        <p className="posts-article-description">{description} <br /><Link to={ROUTES.ARTICLE}>Read More...</Link></p>
+        <p className="posts-article-description">{description} <br /><Link to={ROUTES.ARTICLE(id)}>Read More...</Link></p>
 
     </article>
 }

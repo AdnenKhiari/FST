@@ -41,5 +41,6 @@ const Article = () => {
       </article>
     </section>
   );
+
 };
 export default Article;

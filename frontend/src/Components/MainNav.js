@@ -13,6 +13,7 @@ const MainNav = ()=>{
                 <li><Link to={ROUTES.NEWS}>News</Link></li>
                 <li><Link to={ROUTES.POSTS}>Articles</Link></li>
                 <li><Link to={ROUTES.CONTACTUS}>Contact Us</Link></li>
+                <li><Link to={ROUTES.LOGIN}>Log In</Link></li>
             </ul>
         </nav>
     </div>
